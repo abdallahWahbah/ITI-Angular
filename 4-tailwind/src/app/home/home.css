@@ -1,0 +1,24 @@
+.btn__orange{
+    @apply bg-orange-500 text-sky-700 px-10 py-14 border border-orange-700 rounded-sm hover:text-sky-900 hover:bg-orange-900 transition-all
+}
+.btn__green{
+    @apply bg-green-500 text-sky-700 px-10 py-14 border border-green-700 rounded-sm hover:text-sky-900 hover:bg-green-900 transition-all
+}
+.center{
+    @apply flex justify-center items-center
+}
+.translate-middle{
+    @apply -translate-x-1/2 -translate-y-1/2
+}
+
+
+@media screen(sm) {
+}
+@media screen(md) {   
+}
+@media screen(lg) {
+}
+@media screen(xl) {   
+}
+@media screen(2xl) {
+}

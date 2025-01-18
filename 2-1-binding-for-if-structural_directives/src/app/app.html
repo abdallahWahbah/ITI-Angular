@@ -1,0 +1,49 @@
+<div>
+  <!-- Class binding -->
+  <h2 [class.red-background]="age > 20 || name === 'Hala'">Class binding</h2>
+  <h2 [class]="{
+    'text-centering': this.age > 20,
+    'blue-color': this.name === 'Abdallah'
+  }">
+    Class binding
+  </h2>
+
+  <!-- style binding -->
+  <h2 [style.color]="'red'">style binding</h2>
+  <h2 [style]="{'color': age > 20 ? 'orange' : 'blue' }">style binding</h2>
+
+  <!-- control flow: for, if, switch -->
+  <!-- for -->
+  <ul>
+    @for(item of objForLoop; track item.id; let i = $index){
+    <li>{{item.id}}, {{item.name}}</li>
+    }@empty {
+    <li>only rendered of array length = 0</li>
+    }
+  </ul>
+  
+  <!-- if -->
+  @if(role === "admin"){
+    <h1>I am admin</h1>
+  }@else if(role === "user"){
+    <h1>I am user</h1>
+  }
+  @else {
+    <h1>I am visitor</h1>
+  }
+
+  <!-- two way data binding -->
+  <input type="text" [(ngModel)]="inputText">
+  <span>{{inputText}}</span>
+
+  <!-- stuctural directives: starts with * >>>>> changes the DOM >> if it adds an element or not -->
+  <!-- @for is better for performance -->
+  <ul *ngIf="objForLoop.length !== 0">
+    <li *ngFor="let item of objForLoop; let i = index">{{item.id}}, {{item.name}}</li>
+  </ul>
+
+  <p *ngIf="serverCreated; else noServer"> Server was created! (strcutural directive)(conditional rendering)</p>
+  <ng-template #noServer>
+      <p>No server</p>
+  </ng-template>
+</div>
