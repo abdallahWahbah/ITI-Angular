@@ -1,0 +1,37 @@
+<h3>🔤 String Pipes</h3>
+<p>{{ name | uppercase }}</p>
+<p>{{ name | titlecase }}</p>
+<p>{{ message | lowercase }}</p>
+
+<hr />
+
+<h3>🔢 Number Pipes</h3>
+<p>{{ price | number:'1.2-2' }}</p>
+<p>{{ price | currency:'USD' }}</p>
+<p>{{ percentage | percent }}</p>
+
+<hr />
+
+<h3>📅 Date Pipes</h3>
+<p>{{ today | date }}</p>
+<p>{{ today | date:'short' }}</p>
+<p>{{ today | date:'fullDate' }}</p>
+
+<hr />
+
+<h3>📦 Object Pipe</h3>
+<pre>{{ user | json }}</pre>
+
+<hr />
+
+<h3>📚 Array Pipes</h3>
+<p>{{ users | slice:0:2 }}</p>
+<!-- <p>{{ users | join:', ' }}</p> -->
+
+<hr />
+
+<h3>🧠 Chained Pipes (keep it readable)</h3>
+<p>{{ name | uppercase | slice:0:8 }}</p>
+
+<h3>custom pipe</h3>
+<p>{{ "hello from the other side" | truncate:5 }}</p>
